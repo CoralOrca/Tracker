@@ -14,6 +14,10 @@
   height: 250px;
 }
 
+body {
+  font-family: 'Inter', sans-serif; /* Fallback to sans-serif if Inter is not available */
+}
+
 .Logo-header {
   width: 100px;  /* Adjust width as needed */
   height: auto;  /* Maintain aspect ratio */

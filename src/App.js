@@ -6,13 +6,7 @@ import jsonData from "./OnChain.json"; // Import your JSON file
 import logoSvg from "./magnifierNoun.svg"; // Replace with the path to your SVG file
 import styled, { createGlobalStyle } from "styled-components";
 
-// Add your Google Font link here
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&family=Source+Code+Pro:wght@500&display=swap');
-
-  body {
-    font-family: 'Inter';
-  }
 `;
 
 function App() {
@@ -34,8 +28,6 @@ function App() {
               alt="Your Logo Alt Text"
             />
           </div>
-
-          {/* Optionally include DatePicker here */}
         </div>
 
         <div className="header-right">
@@ -85,7 +77,7 @@ function App() {
         </div>
       </main>
       <footer className="App-footer">
-        <p>© 2024 by Coralorca. All rights released.</p>
+        <p>© 2024 by Coralorca. All rights released ⌐◨-◨.</p>
         {/* Add more content here as needed */}
       </footer>
     </div>
