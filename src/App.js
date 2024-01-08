@@ -69,6 +69,9 @@ function App() {
               Coralorca
             </a>
           </div>
+          <div className="data-from">
+            This is a Desktop version, responsive app coming up.{" "}
+          </div>
         </div>
       </header>
       <main key={mainContentKey}>
