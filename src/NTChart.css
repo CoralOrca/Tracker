@@ -1,0 +1,35 @@
+/* NTChart.css */
+.nt-chart {
+    display: flex;
+    flex-direction: column;
+    
+    height: max-content;
+  }
+  
+  .bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stacked-bar {
+    height: 12px;
+  }
+  
+  .label {
+    margin-left: 4px; /* Adjust as needed for spacing */
+    font-size: x-small;
+  }
+  
+  .quorum{
+    height: 44px;
+  }
+
+  .quorum-bar{
+    align-items: center;
+  }
+
+  .total-bar{
+    
+    height: 36px;
+    margin-top: -40px;
+  }

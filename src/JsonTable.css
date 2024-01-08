@@ -1,0 +1,313 @@
+/* JsonTable.css */
+td, th {
+  text-align: left;
+  padding: 6px;
+}
+/**********************************************************************************************************************/
+.table-container {
+  display: block;
+  max-height: calc(100vh - [YourHeaderHeight]); /* Adjust this value based on the height of your page header */
+}
+
+.fixed-header {
+  position: sticky;
+  top: 0;
+  /*background-color: rgb(108, 111, 122);*/
+  background-color: white;
+  z-index: 10;
+  width: 3600px;
+}
+
+/* Ensure the table layout is fixed so the column widths don't change */
+table {
+  table-layout: fixed;
+  width: 3600px;
+}
+
+.financials{
+  font-family: 'Source Code Pro', monospace;
+}
+
+.col-xs {
+  width: 60px;
+}
+
+.col-financial {
+  width: 70px; /* or your preferred narrow width */
+  background-color: rgba(196, 206, 210);
+}
+
+.col-financial-header {
+  width: 70px; /* or your preferred narrow width */
+  background-color: rgba(196, 206, 210);
+}
+
+tr:nth-child(odd) .col-financial {
+  background-color: #dcdfe2;
+}
+
+tr:nth-child(even) .col-financial {
+  background-color: #c8ccd1;
+}
+
+
+.col-small {
+  width: 75px; /* or your preferred narrow width */
+}
+
+
+.col-medium {
+  width: 90px; /* or your preferred medium width */
+}
+.col-Xmedium {
+  width: 110px; /* or your preferred medium width */
+}
+
+.col-large {
+  width: 150px; /* or your preferred wide width */
+}
+
+
+.col-title {
+  width: 170px; /* or your preferred wide width */
+}
+  
+/**********************************************************************************************************************/
+.header-row {
+  background-color: #d4d8df;
+  font-weight: 600;
+  /*box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);*/
+}
+
+tr:nth-child(odd) {
+  background-color: #fdfeff;
+}
+tr:nth-child(even) {
+  background-color: #e6ebf3;
+}
+
+.sum-row {
+  background-color: #7a7e84!important;
+  font-size: 0.7rem;
+  margin: 10px;
+  box-shadow: 0px 3px 3px 0px rgba(58, 59, 60, 0.5);
+  z-index: -1000;
+  color: white;
+}
+/*
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}*/
+
+.defeated, .canceled, .succeeded, .noQuorum {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: small;
+  background-color: inherit;
+}
+
+.defeated {
+  background-color: rgba(206, 37, 71, 0.75);
+}
+
+.canceled {
+  background-color: rgba(110, 110, 110, 0.75);
+}
+
+.succeeded {
+  background-color: rgba(13, 146, 77, 0.75);
+}
+
+.noQuorum {
+  background-color: rgba(206, 37, 71, 0.75);
+}
+/**************************************************************************************************************************************Index**/
+.index-defeated, .index-canceled, .index-succeeded, .index-noQuorum {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: white;
+  font-size: small;
+  background-color: inherit;
+  text-decoration: none;
+}
+
+.index-defeated {
+  background-color: rgba(206, 37, 71, 0.75);
+}
+.index-canceled {
+  background-color: rgba(110, 110, 110, 0.75);
+}
+.index-succeeded{
+  background-color: rgba(13, 146, 77, 0.75); 
+}
+
+.index-noQuorum {
+  background-color: rgba(206, 37, 71, 0.75);
+}
+
+.index-defeated:hover,
+.index-canceled:hover,
+.index-noQuorum:hover,
+.index-succeeded:hover {
+  font-weight: 600;
+  padding: 7px 12px;
+  transition: padding 0.1s ease; /* Add a transition effect */
+  margin-right: -5px;
+}
+
+/***************************************************************************************************************************************TLDR**/
+.title{
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: small;
+  align-items: left;
+}
+
+/*
+.label-total{
+  font-size: small;
+  margin-top: 40px;
+  text-align: right;
+}*/
+
+/*has effect on unstyled cells*/
+.row-style{
+  font-size: small;
+}
+
+.category-list{
+  font-size: small;
+  list-style-type: none;
+  padding: 0;
+}
+
+.code-style{
+  font-family: 'Source Code Pro', monospace;;
+  font-size: small;
+  list-style-type: none;
+  padding: 0;
+  /*background-color: rgba(205, 213, 221, 0.5);*/
+}
+/********************************************************************************/
+.filter-popup {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  margin: auto;
+  background-color: #c9ccd2;
+  padding: 15px;
+  z-index: 1000;
+  font-size: small;
+  font-weight: 600;
+}
+
+/***************************************************************************************************************************************TLDR**/
+.title-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.title-container .tldr-popup {
+  visibility: hidden;
+  width: 300px; /* Adjust the width as needed */
+  background-color: #f9f9f9;
+  color: black;
+  text-align: left;
+  font-size:small;
+  border-radius: 6px;
+  padding: 15px 15px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -100px; /* Adjust the margin to center the popup */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.title-container:hover .tldr-popup {
+  visibility: visible;
+}
+
+.column-links {
+  color: rgb(0, 0, 0);
+  font-size: small;
+  align-items: left;
+}
+
+.checkmark-style{
+  padding: 5px 5px;
+  text-align: center;
+}
+/*************************************************************************************************************************************STATUS*/
+.status-completed, .status-onSchedule, .status-canceled, .status-behind, .status-abandoned, .status-uncertain {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: small;
+  background-color: inherit;
+}
+
+.status-completed{
+  background-color: rgba(13, 146, 77, 0.75); 
+}
+
+.status-onSchedule{
+  background-color: rgba(58, 172, 155, 0.75); 
+}
+
+.status-behind{
+  background-color: rgba(255, 160, 18, 0.75); 
+}
+
+.status-canceled{
+  background-color: rgba(119, 119, 119, 0.75); 
+}
+
+.status-abandoned{
+  background-color: rgba(0, 0, 0, 0.75); 
+}
+
+.status-uncertain{
+  background-color: rgba(145, 41, 48, 0.75); 
+}
+
+.more-items-popover {
+  position: relative;
+  cursor: pointer;
+}
+
+.popover-content {
+  visibility: hidden;
+  width: 120px;
+  background-color: #f9f9f9;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.more-items-popover:hover .popover-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.centered-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

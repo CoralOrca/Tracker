@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+  font-family: 'Inter';
+}
+
+.App-header {
+  /* Ensure your header has full width */
+  width: 100%;
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Vertically centers the content */
+  justify-content: flex-start; /* Aligns the content to the start (left) */
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  height: 250px;
+}
+
+.Logo-header {
+  width: 100px;  /* Adjust width as needed */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+.Refresh-icon:hover {
+  cursor: pointer;
+}
+
+.header-right {
+  position: fixed;
+  top: 0; /* Adjust as needed for vertical positioning */
+  right: 0; /* Aligns to the right side of the screen */
+  padding-right: 20px; /* Adjusts padding for spacing from the edge */
+  text-align: right;
+  margin-top: 35px;
+}
+
+.built-by,
+.data-from {
+  margin-right: 20px; /* Adjust as needed */
+  font-size: small;
+  
+  /* Add any additional styling such as color, etc. */
+}
+
+
+.App-footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1; /* Choose a background color that fits your design */
+  color: #333; /* Text color */
+  /* Add any additional styling such as font size, borders, etc. */
+}
