@@ -75,7 +75,7 @@ tr:nth-child(even) .col-financial {
 /**********************************************************************************************************************/
 .header-row {
   background-color: #d4d8df;
-  font-weight: 600;
+  font-weight: 500;
   /*box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);*/
 }
 

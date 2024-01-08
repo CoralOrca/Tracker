@@ -32,7 +32,7 @@ function App() {
 
         <div className="header-right">
           <div className="built-by">
-            Website built by{" "}
+            Prototype built by{" "}
             <a
               href="https://twitter.com/coralorca"
               target="_blank"
@@ -41,6 +41,17 @@ function App() {
               Coralorca
             </a>{" "}
             for Nouns{" "}
+          </div>
+          <div className="built-by">
+            {" "}
+            Inspired by{" "}
+            <a
+              href="https://maty-eth.notion.site/maty-eth/Proposal-Dashboard-39838dbdffa84184a436d4b562aaf55d"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              proposals.wtf{" "}
+            </a>
           </div>
           <div className="data-from">
             Data from{" "}
@@ -80,7 +91,7 @@ function App() {
         </div>
       </main>
       <footer className="App-footer">
-        <p>© 2024 by Coralorca. All rights released ⌐◨-◨.</p>
+        <p>© 2024 by Coralorca. Zero rights reserved ⌐◨-◨.</p>
         {/* Add more content here as needed */}
       </footer>
     </div>

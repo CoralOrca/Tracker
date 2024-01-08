@@ -44,11 +44,12 @@ body {
   /* Add any additional styling such as color, etc. */
 }
 
-
 .App-footer {
   padding: 20px;
   text-align: center;
-  background-color: #f1f1f1; /* Choose a background color that fits your design */
-  color: #333; /* Text color */
+  background-color: white;
+  color: #333; 
+  width: 3400px;
+  text-align: left;
   /* Add any additional styling such as font size, borders, etc. */
 }
