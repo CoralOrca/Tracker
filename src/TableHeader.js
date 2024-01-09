@@ -179,14 +179,14 @@ const TableHeader = ({
                       {showNounsTokensGroup ? (
                         <RiArrowLeftSLine
                           style={{
-                            fontSize: "x-large",
+                            fontSize: "large",
                             color: "black",
                           }}
                         />
                       ) : (
                         <RiArrowRightSLine
                           style={{
-                            fontSize: "x-large",
+                            fontSize: "large",
                             color: "black",
                           }}
                         />
@@ -202,14 +202,14 @@ const TableHeader = ({
                       {showWalletsGroup ? (
                         <RiArrowLeftSLine
                           style={{
-                            fontSize: "x-large",
+                            fontSize: "large",
                             color: "black",
                           }}
                         />
                       ) : (
                         <RiArrowRightSLine
                           style={{
-                            fontSize: "x-large",
+                            fontSize: "large",
                             color: "black",
                           }}
                         />
@@ -222,14 +222,14 @@ const TableHeader = ({
                       {showTxGroup ? (
                         <RiArrowLeftSLine
                           style={{
-                            fontSize: "x-large",
+                            fontSize: "large",
                             color: "black",
                           }}
                         />
                       ) : (
                         <RiArrowRightSLine
                           style={{
-                            fontSize: "x-large",
+                            fontSize: "large",
                             color: "black",
                           }}
                         />

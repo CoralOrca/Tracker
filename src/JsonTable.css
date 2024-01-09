@@ -35,6 +35,7 @@ table {
 .col-financial {
   width: 70px; /* or your preferred narrow width */
   background-color: rgba(196, 206, 210);
+  font-size: 0.70rem;
 }
 
 .col-financial-header {
@@ -43,18 +44,17 @@ table {
 }
 
 tr:nth-child(odd) .col-financial {
-  background-color: #dcdfe2;
+  background-color: #eff2f5;
 }
 
 tr:nth-child(even) .col-financial {
-  background-color: #c8ccd1;
+  background-color: rgb(215, 219, 224);
 }
 
 
 .col-small {
   width: 75px; /* or your preferred narrow width */
 }
-
 
 .col-medium {
   width: 90px; /* or your preferred medium width */
@@ -69,7 +69,7 @@ tr:nth-child(even) .col-financial {
 
 
 .col-title {
-  width: 170px; /* or your preferred wide width */
+  width: 200px; /* or your preferred wide width */
 }
   
 /**********************************************************************************************************************/
@@ -188,7 +188,7 @@ table {
 
 .code-style{
   font-family: 'Source Code Pro', monospace;;
-  font-size: small;
+  font-size: x-small;
   list-style-type: none;
   padding: 0;
   /*background-color: rgba(205, 213, 221, 0.5);*/

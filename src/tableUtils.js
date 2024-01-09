@@ -27,7 +27,7 @@ export const renderTitle = (row) => (
         rel="noopener noreferrer"
         className="read-more-link"
       >
-        ..Read more
+        --> Read more
       </a>
     </div>
   </div>

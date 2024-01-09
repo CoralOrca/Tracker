@@ -19,7 +19,7 @@ body {
 }
 
 .Logo-header {
-  width: 100px;  /* Adjust width as needed */
+  width: 150px;  /* Adjust width as needed */
   height: auto;  /* Maintain aspect ratio */
 }
 
@@ -50,5 +50,6 @@ body {
   color: #333; 
   width: 3400px;
   text-align: left;
+  font-size: small;
   /* Add any additional styling such as font size, borders, etc. */
 }
