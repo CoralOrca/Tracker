@@ -39,8 +39,7 @@ body {
 .built-by,
 .data-from {
   margin-right: 20px; /* Adjust as needed */
-  font-size: small;
-  
+  font-size: x-small;
   /* Add any additional styling such as color, etc. */
 }
 

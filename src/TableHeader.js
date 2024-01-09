@@ -163,7 +163,11 @@ const TableHeader = ({
                       style={{ float: "right" }}
                       onClick={() => toggleFilterPopup(column)}
                     >
-                      {filterIsActive ? <RiFilterFill /> : <RiFilterLine />}
+                      {filterIsActive ? (
+                        <RiFilterFill style={{ color: "black" }} />
+                      ) : (
+                        <RiFilterLine style={{ color: "black" }} />
+                      )}
                     </button>
                   )}
 
@@ -176,12 +180,14 @@ const TableHeader = ({
                         <RiArrowLeftSLine
                           style={{
                             fontSize: "x-large",
+                            color: "black",
                           }}
                         />
                       ) : (
                         <RiArrowRightSLine
                           style={{
                             fontSize: "x-large",
+                            color: "black",
                           }}
                         />
                       )}
@@ -197,12 +203,14 @@ const TableHeader = ({
                         <RiArrowLeftSLine
                           style={{
                             fontSize: "x-large",
+                            color: "black",
                           }}
                         />
                       ) : (
                         <RiArrowRightSLine
                           style={{
                             fontSize: "x-large",
+                            color: "black",
                           }}
                         />
                       )}
@@ -215,12 +223,14 @@ const TableHeader = ({
                         <RiArrowLeftSLine
                           style={{
                             fontSize: "x-large",
+                            color: "black",
                           }}
                         />
                       ) : (
                         <RiArrowRightSLine
                           style={{
                             fontSize: "x-large",
+                            color: "black",
                           }}
                         />
                       )}
@@ -234,12 +244,14 @@ const TableHeader = ({
                           <RiArrowDownSLine
                             style={{
                               fontSize: "large",
+                              color: "black",
                             }}
                           />
                         ) : (
                           <RiArrowUpSLine
                             style={{
                               fontSize: "large",
+                              color: "black",
                             }}
                           />
                         )
@@ -247,6 +259,7 @@ const TableHeader = ({
                         <RiArrowDownSLine
                           style={{
                             fontSize: "large",
+                            color: "black",
                           }}
                         />
                       )}
