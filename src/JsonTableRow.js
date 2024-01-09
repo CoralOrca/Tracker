@@ -1,5 +1,5 @@
 import React from "react";
-import { RiCheckFill } from "react-icons/ri";
+import { RiCheckFill, RiTwitterXFill } from "react-icons/ri";
 import {
   renderTitle,
   renderPropdate,
@@ -289,18 +289,22 @@ const JsonTableRow = ({
 
       case "Team":
         return (
-          <td key={column} className=" row-style">
+          <td key={column} className="row-style">
             {Array.isArray(row[column]) && Array.isArray(row["Twitter links"])
               ? row[column].map((name, index) => (
                   <React.Fragment key={index}>
-                    <a
-                      href={row["Twitter links"][index]}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="team-link"
-                    >
-                      {name.trim()}
-                    </a>
+                    {row["Twitter links"][index] ? (
+                      <a
+                        href={row["Twitter links"][index]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="team-link"
+                      >
+                        {name.trim()} <RiTwitterXFill />
+                      </a>
+                    ) : (
+                      <span>{name.trim()}</span>
+                    )}
                     {index < row[column].length - 1 && ", "}
                   </React.Fragment>
                 ))

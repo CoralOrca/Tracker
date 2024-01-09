@@ -40,11 +40,7 @@ function App() {
             >
               Coralorca
             </a>{" "}
-            for Nouns{" "}
-          </div>
-          <div className="built-by">
-            {" "}
-            Inspired by{" "}
+            for Nouns. Inspired by{" "}
             <a
               href="https://maty-eth.notion.site/maty-eth/Proposal-Dashboard-39838dbdffa84184a436d4b562aaf55d"
               target="_blank"
