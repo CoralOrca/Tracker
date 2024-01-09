@@ -239,3 +239,12 @@ export const formatVotingEnd = (row) => {
 
   return "";
 };
+
+// Function to count checkmarks in the "Stream" column
+export const countCheckmarksInStream = (data) => {
+  return data.reduce((count, row) => {
+    const transactions = row["Transactions details"] || [];
+    const hasCreateStream = transactions.includes("createStream");
+    return hasCreateStream ? count + 1 : count;
+  }, 0);
+};

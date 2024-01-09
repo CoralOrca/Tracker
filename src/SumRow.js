@@ -4,6 +4,7 @@ import {
   countUniqueValues,
   countUniqueStringsInArrayOfArrays,
   sumIntegersInColumn,
+  countCheckmarksInStream,
 } from "./tableUtils";
 
 import {
@@ -85,6 +86,8 @@ const SumRow = ({
                   filteredData,
                   "Team"
                 )}`
+              : column === "Stream"
+              ? `Streams: ${countCheckmarksInStream(filteredData)}`
               : column === "Proposer"
               ? `Proposers: ${countUniqueValues(filteredData, "Proposer")}`
               : ""}
