@@ -429,11 +429,7 @@
     "Total value": 325000,
     "True cost": 0,
     "Includes Nouns": "Yes",
-    "Nouns ID": [
-      "862",
-      "912",
-      "913"
-    ],
+    "Nouns ID": "",
     "Has extra funds": "No",
     "Nouns vote": "",
     "Nouns Voting": 102,
@@ -620,7 +616,11 @@
     "Total value": 0,
     "True cost": 0,
     "Includes Nouns": "Yes",
-    "Nouns ID": "",
+    "Nouns ID": [
+      "862",
+      "912",
+      "913"
+    ],
     "Has extra funds": "No",
     "Nouns vote": "",
     "Nouns Voting": 121,

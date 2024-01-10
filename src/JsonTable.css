@@ -18,6 +18,15 @@ td, th {
   width: 3600px;
 }
 
+.sum-row {
+  background-color: #4b5259!important;
+  font-size: 0.7rem;
+  margin: 10px;
+  box-shadow: 0px 3px 3px 0px rgba(58, 59, 60, 0.5);
+  z-index: -1000;
+  color: white;
+}
+
 /* Ensure the table layout is fixed so the column widths don't change */
 table {
   table-layout: fixed;
@@ -31,7 +40,7 @@ table {
 .col-xs {
   width: 60px;
 }
-
+/**************************************************************************************************************************************/
 .col-financial {
   width: 70px; /* or your preferred narrow width */
   background-color: rgba(196, 206, 210);
@@ -44,13 +53,13 @@ table {
 }
 
 tr:nth-child(odd) .col-financial {
-  background-color: #eff2f5;
+  background-color: #f4f7fa;
 }
 
 tr:nth-child(even) .col-financial {
-  background-color: rgb(215, 219, 224);
+  background-color: rgb(230, 232, 237); /*darker*/
 }
-
+/*************************************************************************************************************************************/
 
 .col-small {
   width: 75px; /* or your preferred narrow width */
@@ -83,23 +92,16 @@ tr:nth-child(odd) {
   background-color: #fdfeff;
 }
 tr:nth-child(even) {
-  background-color: #e6ebf3;
+  background-color: #f4f7fc; /*darker*/
 }
 
-.sum-row {
-  background-color: #7a7e84!important;
-  font-size: 0.7rem;
-  margin: 10px;
-  box-shadow: 0px 3px 3px 0px rgba(58, 59, 60, 0.5);
-  z-index: -1000;
-  color: white;
-}
+
 /*
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }*/
-
+/**************************************************************************************************************************************Outcome**/
 .defeated, .canceled, .succeeded, .noQuorum {
   display: inline-block;
   padding: 5px 10px;
@@ -107,6 +109,7 @@ table {
   color: white;
   font-size: small;
   background-color: inherit;
+  position: relative; /* Establishes a containing block for absolute positioning */
 }
 
 .defeated {
@@ -124,6 +127,17 @@ table {
 .noQuorum {
   background-color: rgba(206, 37, 71, 0.75);
 }
+
+.succeeded::after {
+  content: ''; /* Essential for displaying the pseudo-element */
+  position: absolute; /* Positions the pseudo-element relative to its parent */
+  left: 100%; /* Positions the start of the line at the end of the pill */
+  top: 50%; /* Aligns the top of the line to the middle of the pill */
+  border-top: 2px solid rgba(13, 146, 77, 0.75); /* Style of the line */
+  width: 35px; /* Length of the line */
+  transform: translateY(-50%); /* Centers the line vertically */
+}
+
 /**************************************************************************************************************************************Index**/
 .index-defeated, .index-canceled, .index-succeeded, .index-noQuorum {
   display: inline-block;
@@ -159,7 +173,6 @@ table {
   margin-right: -5px;
 }
 
-/***************************************************************************************************************************************TLDR**/
 .title{
   color: black;
   font-weight: 500;
@@ -168,14 +181,6 @@ table {
   align-items: left;
 }
 
-/*
-.label-total{
-  font-size: small;
-  margin-top: 40px;
-  text-align: right;
-}*/
-
-/*has effect on unstyled cells*/
 .row-style{
   font-size: small;
 }
@@ -193,7 +198,7 @@ table {
   padding: 0;
   /*background-color: rgba(205, 213, 221, 0.5);*/
 }
-/********************************************************************************/
+
 .filter-popup {
   position: fixed;
   top: 40px;
@@ -208,7 +213,7 @@ table {
   font-weight: 500;
 }
 
-/***************************************************************************************************************************************TLDR**/
+
 .title-container {
   position: relative;
   cursor: pointer;
