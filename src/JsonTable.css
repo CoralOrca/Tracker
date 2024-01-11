@@ -121,7 +121,7 @@ table {
 }
 
 .succeeded {
-  background-color: rgba(13, 146, 77, 0.75);
+  background-color: rgba(13, 146, 77,0.75);
 }
 
 .noQuorum {

@@ -2,54 +2,136 @@
   text-align: center;
   font-family: 'Inter';
 }
-
 .App-header {
-  /* Ensure your header has full width */
+ /* Ensure your header has full width */
   width: 100%;
-  display: flex; /* Enables flexbox */
-  align-items: center; /* Vertically centers the content */
-  justify-content: flex-start; /* Aligns the content to the start (left) */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   background-color: rgb(255, 255, 255);
-  margin: 20px;
-  height: 250px;
+  height: 350px;
 }
-
 body {
-  font-family: 'Inter', sans-serif; /* Fallback to sans-serif if Inter is not available */
+  font-family: 'Inter', sans-serif;
+ /* Fallback to sans-serif if Inter is not available */
+}
+.Logo-header {
+  width: 100px; 
+  height: auto; 
+  margin-left: 25px;
+  margin-top: 25px;
 }
 
-.Logo-header {
-  width: 150px;  /* Adjust width as needed */
-  height: auto;  /* Maintain aspect ratio */
+@media (max-width: 768px) { 
+  .Logo-header {
+    width: 50px; 
+  }
 }
+
 
 .Refresh-icon:hover {
   cursor: pointer;
 }
-
 .header-right {
   position: absolute;
-  top: 0; /* Adjust as needed for vertical positioning */
-  right: 0; /* Aligns to the right side of the screen */
-  padding-right: 20px; /* Adjusts padding for spacing from the edge */
+  top: 0;
+ /* Adjust as needed for vertical positioning */
+  right: 0;
+ /* Aligns to the right side of the screen */
+  padding-right: 20px;
+ /* Adjusts padding for spacing from the edge */
   text-align: right;
   margin-top: 35px;
-}
 
-.built-by,
-.data-from {
-  margin-right: 20px; /* Adjust as needed */
-  font-size: x-small;
-  /* Add any additional styling such as color, etc. */
+}
+.built-by, .data-from {
+  margin-right: 20px;
+  font-size: small;
+}
+@media (max-width: 768px) { 
+  .built-by, .data-from {
+  font-size: xx-small;
+  }
 }
 
 .App-footer {
   padding: 20px;
   text-align: center;
   background-color: white;
-  color: #333; 
+  color: #333;
   width: 3400px;
   text-align: left;
   font-size: small;
-  /* Add any additional styling such as font size, borders, etc. */
+ /* Add any additional styling such as font size, borders, etc. */
+}
+
+
+
+/***********************************************************************Pie*/
+
+.pie-parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-chart-container {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.pie-chart-diagram{
+  margin: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 700px) { 
+  .pie-chart-container {
+    width: 135px;
+    height: 135px;
+    margin-top: 50px;
+  }
+
+  .pie-chart-diagram{
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 400px) { 
+  .pie-chart-container {
+    width: 125px;
+    height: 125px;
+    margin-top: 50px;
+  }
+
+  .pie-chart-diagram{
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+@media (max-width: 375px) { 
+  .pie-chart-container {
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+    
+  }
+}
+
+
+.pie-title {
+  font-size: small;
+  margin: 20 px auto;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

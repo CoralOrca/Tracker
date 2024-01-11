@@ -46,6 +46,8 @@ export const invisibleColumns = [
   "Voting end time (GMT+9)",
   "Voting end",
   "Former candidate",
+  "Nouns Turnout",
+  "Wallets Turnout",
 
   // ... any other columns that should be invisible
 ];
@@ -89,6 +91,7 @@ export const backgroundHeader1 = [
   "Wallets Turnout",
   "Transactions details",
   "Transactions Notes",
+  "Block",
 ];
 
 export const backgroundHeader2 = [
@@ -117,4 +120,8 @@ export const walletsColumns = [
   "Wallets Turnout",
 ];
 
-export const txColumns = ["Transactions details", "Transactions Notes"];
+export const txColumns = [
+  "Transactions details",
+  "Transactions Notes",
+  "Block",
+];
