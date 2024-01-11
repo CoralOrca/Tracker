@@ -65,7 +65,7 @@
     "ETH": 67,
     "USDC": 28500,
     "Total value": "",
-    "True cost": 0,
+    "True cost": 182800,
     "Includes Nouns": "No",
     "Nouns ID": "",
     "Has extra funds": "No",
@@ -661,7 +661,7 @@
     "Sponsor": "screenshotessays.eth",
     "Sponsor Link": "https://etherscan.io/address/0x44b1b486ce8d9c82f605626347a7b1f74add11de",
     "Former candidate": "",
-    "Team": "[\"mrtn\",wag\",\"krel\"]",
+    "Team": ["mrtn","wag","krel"],
     "Twitter links": [
       "https://twitter.com/anquetil",
       "https://twitter.com/0xwag",
@@ -1293,7 +1293,7 @@
     "Sponsor": "",
     "Sponsor Link": "",
     "Former candidate": "No",
-    "Team": "[Cole Perkins\",\"Spencer Perkins\",\"Toady Hawk\",\"Benbodhi\"]",
+    "Team": ["Cole Perkins","Spencer Perkins","Toady Hawk","Benbodhi"],
     "Twitter links": [
       "https://twitter.com/coleperkins_",
       "https://twitter.com/spencerperkins_",
