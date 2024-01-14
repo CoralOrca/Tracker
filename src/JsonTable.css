@@ -3,6 +3,13 @@ td, th {
   text-align: left;
   padding: 6px;
 }
+
+/*
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}*/
+
 /**********************************************************************************************************************/
 .table-container {
   display: block;
@@ -30,11 +37,7 @@ td, th {
 /* Ensure the table layout is fixed so the column widths don't change */
 table {
   table-layout: fixed;
-  width: 3600px;
-}
-
-.financials{
-  font-family: 'Source Code Pro', monospace;
+  width: 120%;
 }
 
 .col-xs {
@@ -42,45 +45,42 @@ table {
 }
 /**************************************************************************************************************************************/
 .col-financial {
-  width: 70px; /* or your preferred narrow width */
-  background-color: rgba(196, 206, 210);
-  font-size: 0.70rem;
+  width: 90px; /* or your preferred narrow width */
 }
 
-.col-financial-header {
-  width: 70px; /* or your preferred narrow width */
-  background-color: rgba(196, 206, 210);
-}
 
 tr:nth-child(odd) .col-financial {
-  background-color: #f4f7fa;
+  background-color: #d4d7d9;
 }
 
 tr:nth-child(even) .col-financial {
-  background-color: rgb(230, 232, 237); /*darker*/
+  background-color: #c4c7cd; 
 }
-/*************************************************************************************************************************************/
 
+
+/*************************************************************************************************************************************/
 .col-small {
-  width: 75px; /* or your preferred narrow width */
+  width: 100px;
 }
 
 .col-medium {
-  width: 90px; /* or your preferred medium width */
+  width: 110px; 
 }
 .col-Xmedium {
-  width: 110px; /* or your preferred medium width */
+  width: 110px; 
 }
 
 .col-large {
-  width: 150px; /* or your preferred wide width */
+  width: 150px; 
 }
-
 
 .col-title {
-  width: 200px; /* or your preferred wide width */
+  width: 260px; 
 }
-  
+
+.col-people{
+  width: 160px; 
+}
 /**********************************************************************************************************************/
 .header-row {
   background-color: #d4d8df;
@@ -96,11 +96,6 @@ tr:nth-child(even) {
 }
 
 
-/*
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}*/
 /**************************************************************************************************************************************Outcome**/
 .defeated, .canceled, .succeeded, .noQuorum {
   display: inline-block;
@@ -121,7 +116,7 @@ table {
 }
 
 .succeeded {
-  background-color: rgba(13, 146, 77, 0.75);
+  background-color: rgba(13, 146, 77,0.75);
 }
 
 .noQuorum {
@@ -147,6 +142,7 @@ table {
   font-size: small;
   background-color: inherit;
   text-decoration: none;
+  transform: translateX(10px);
 }
 
 .index-defeated {
@@ -177,19 +173,73 @@ table {
   color: black;
   font-weight: 500;
   text-decoration: none;
-  font-size: small;
+  font-size: 0.9rem;
   align-items: left;
 }
 
 .row-style{
   font-size: small;
 }
-
+/*----------------------------------------------------------------------*/
 .category-list{
-  font-size: small;
   list-style-type: none;
-  padding: 0;
+  margin-right: 30%;
+  margin-left: auto;
 }
+
+.category-pill {
+  padding: 5px;
+  border-radius: 15px;
+  color: white;
+  font-size: x-small;
+  margin: 2px;
+  text-align: center;
+}
+
+.category-tech {
+  background-color: rgba(54, 90, 231,0.71);
+}
+
+.category-art {
+  background-color: rgba(75, 50, 236,0.71);
+}
+
+.category-community {
+  background-color: rgba(59, 148, 227,0.71);
+}
+
+.category-droposal{
+  background-color: rgba(204, 41, 245,0.71);
+}
+
+.category-charity{
+  background-color: rgba(61, 176, 225,0.71);
+}
+
+.category-investment{
+  background-color: rgba(240, 38, 247,0.71);
+}
+
+.category-marketing{
+  background-color: rgba(52, 58, 234,0.71);
+}
+
+.category-other{
+  background-color: rgba(136, 45, 240,0.71);
+}
+
+.category-operations{
+  background-color: rgba(56, 120, 229,0.71);
+}
+
+.category-physical{
+  background-color: rgb(105, 47, 238,0.71);
+}
+
+.category-staking{
+  background-color: rgba(169, 43, 243,0.71);
+}
+/*----------------------------------------------------------------------*/
 
 .code-style{
   font-family: 'Source Code Pro', monospace;;

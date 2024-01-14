@@ -12,6 +12,7 @@ import {
   nounsTokenColumns,
   walletsColumns,
   txColumns,
+  costsColumns,
 } from "./TableConfig";
 
 const SumRow = ({
@@ -20,6 +21,7 @@ const SumRow = ({
   showNounsTokensGroup,
   showWalletsGroup,
   showTxGroup,
+  showCostsGroup,
 }) => {
   //--------------------------------------------------------------------------
   // Function to count  array sizes in the "Nouns ID" column
@@ -60,6 +62,7 @@ const SumRow = ({
           (nounsTokenColumns.includes(column) && !showNounsTokensGroup) ||
           (walletsColumns.includes(column) && !showWalletsGroup) ||
           (txColumns.includes(column) && !showTxGroup) ||
+          (costsColumns.includes(column) && !showCostsGroup) ||
           invisibleColumns.includes(column)
         ) {
           return null;
@@ -74,11 +77,15 @@ const SumRow = ({
               : column === "Tx"
               ? `${sumArraySizesInTx(filteredData)}`
               : ["ETH", "USDC", "Total value", "True cost"].includes(column)
-              ? calculateColumnSum(filteredData, column)
+              ? (column === "ETH"
+                  ? "Ξ"
+                  : column === "True cost" || column === "USDC" || "Total value"
+                  ? "$"
+                  : "") + calculateColumnSum(filteredData, column)
               : column === "Updates"
               ? `Props: ${countYesInPropdate(filteredData)}`
-              : column === "Updates Nb"
-              ? `Updates: ${sumIntegersInColumn(filteredData, "Updates Nb")}`
+              : column === "Nb"
+              ? `Updates: ${sumIntegersInColumn(filteredData, "Nb")}`
               : column === "Sponsor"
               ? `Sponsors: ${countUniqueValues(filteredData, "Sponsor") - 1}`
               : column === "Team"

@@ -1,17 +1,14 @@
 .date-picker-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 20px;
-    color: grey; /* Adjust color as needed */
+    position: inline-block;
   }
   
   .date-picker {
     display: inline-block;
     flex-direction: column;
     align-items: flex-start;
-    margin: 10px;
+    margin: 5px;
     color: black; /* Adjust color as needed */
+    
   }
   
   .date-picker input[type="date"] {
@@ -19,8 +16,5 @@
     background-color: white; /* Adjust color as needed */
     border: 1px solid rgb(80, 80, 80); /* Adjust border as needed */
     padding: 5px;
-  }
-  
-  .label-datePicker{
-    font-size: smaller;
+    font-size: small;
   }

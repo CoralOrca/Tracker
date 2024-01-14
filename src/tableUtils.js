@@ -248,3 +248,74 @@ export const countCheckmarksInStream = (data) => {
     return hasCreateStream ? count + 1 : count;
   }, 0);
 };
+
+export const processDataAllPie = (jsonData) => {
+  const counts = jsonData.reduce((acc, item) => {
+    const outcome = item.Outcome;
+    if (acc[outcome]) {
+      acc[outcome] += 1;
+    } else {
+      acc[outcome] = 1;
+    }
+    return acc;
+  }, {});
+
+  const labels = Object.keys(counts);
+  const data = Object.values(counts);
+
+  return { labels, data };
+};
+
+export const processDataForSucceededPie = (jsonData) => {
+  let totalCosts = 0;
+
+  const succeededCounts = jsonData.reduce((acc, item) => {
+    if (item.Outcome === "Succeeded") {
+      const proposalStatus = item["Status"];
+      const trueCost = parseInt(item["True cost"], 10) || 0;
+      totalCosts += trueCost; // Accumulate the total cost
+
+      if (!acc[proposalStatus]) {
+        acc[proposalStatus] = { count: 0, totalCost: 0 };
+      }
+
+      acc[proposalStatus].count += 1;
+      acc[proposalStatus].totalCost += trueCost;
+    }
+    return acc;
+  }, {});
+
+  const labels2 = Object.keys(succeededCounts);
+  const data2 = Object.values(succeededCounts).map((obj) => obj.count);
+
+  // Format the totalCosts value as a string with comma separation
+  const formattedTotalCosts = totalCosts.toLocaleString();
+
+  return { labels2, data2, totalCosts: formattedTotalCosts };
+};
+
+export const processDataCategoryPie = (jsonData) => {
+  // Flatten categories from items with 'Succeeded' outcome into a single array
+  const allCategories = jsonData.reduce((acc, item) => {
+    if (item.Outcome === "Succeeded") {
+      if (Array.isArray(item.Category)) {
+        return acc.concat(...item.Category); // Spread operator for arrays
+      }
+      return acc.concat(item.Category); // Direct concatenation for single string
+    }
+    return acc;
+  }, []);
+
+  // Count occurrences of each category
+  const counts = allCategories.reduce((acc, category) => {
+    if (category) {
+      acc[category] = (acc[category] || 0) + 1;
+    }
+    return acc;
+  }, {});
+
+  const labels3 = Object.keys(counts);
+  const data3 = Object.values(counts);
+
+  return { labels3, data3 };
+};

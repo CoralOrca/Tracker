@@ -1,8 +1,14 @@
 import React from "react";
-import { RiCheckFill, RiTwitterXFill } from "react-icons/ri";
+import {
+  RiCheckFill,
+  RiTwitterXFill,
+  RiTaskLine,
+  RiSearchLine,
+  RiArrowRightLine,
+} from "react-icons/ri";
+import { FaArchway } from "react-icons/fa";
 import {
   renderTitle,
-  renderPropdate,
   renderNTChart,
   renderNTChart2,
   renderTxNb,
@@ -18,7 +24,10 @@ import {
   nounsTokenColumns,
   walletsColumns,
   txColumns,
+  costsColumns,
 } from "./TableConfig";
+
+import getColumnClassUtils from "./GetColumnClassUtils";
 
 const JsonTableRow = ({
   row,
@@ -26,6 +35,7 @@ const JsonTableRow = ({
   showNounsTokensGroup,
   showWalletsGroup,
   showTxGroup,
+  showCostsGroup,
 }) => {
   const renderCellContent = (column, row) => {
     switch (column) {
@@ -46,31 +56,42 @@ const JsonTableRow = ({
       case "Proposal title":
         return <td key={column}>{renderTitle(row)}</td>;
       //--------------------------------------------------------------------------------------------------
-
       case "Category":
         return (
           <div>
             {Array.isArray(row[column]) ? (
               <ul className="category-list">
                 {row[column].map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li
+                    key={index}
+                    className={`category-pill category-${item.toLowerCase()}`}
+                  >
+                    {item}
+                  </li>
                 ))}
               </ul>
             ) : (
-              <div className="category-item">{row[column]}</div>
+              <div
+                className={`category-pill category-${row[
+                  column
+                ].toLowerCase()}`}
+              >
+                {row[column]}
+              </div>
             )}
           </div>
         );
-
+      //--------------------------------------------------------------------------------------------------
       case "ETH":
       case "USDC":
       case "Total value":
       case "True cost":
         return (
-          <span className="financials row-style">
-            <td className="col-financial">{renderNumericValue(row[column])}</td>
+          <span className=" row-style">
+            <td>{renderNumericValue(row[column])}</td>
           </span>
         );
+
       //--------------------------------------------------------------------------------------------------
       case "Includes Nouns":
         if (row["Includes Nouns"] === "No") {
@@ -124,7 +145,7 @@ const JsonTableRow = ({
                 )}
               </ul>
             ) : (
-              <div className="category-item">
+              <div>
                 <a
                   href={`https://nouns.wtf/noun/${row[column]}`}
                   target="_blank"
@@ -172,19 +193,19 @@ const JsonTableRow = ({
 
         return <span className={className}>{row["Outcome"]}</span>;
       //--------------------------------------------------------------------------------------------------
-      case "Proposal status":
+      case "Status":
         const statusOutcome = row["Outcome"];
         if (
-          ["Canceled", "Expired", "Defeated", "Vetoed"].includes(statusOutcome)
+          ["Canceled", "Expired", "Defeated", "Vetoed", "<Quorum"].includes(
+            statusOutcome
+          )
         ) {
           // Return an empty cell if the Outcome is one of the specified values
           return <td key={column}>&nbsp;</td>;
         } else {
           // If Outcome is not one of the specified values, render the Status as usual
-          const StatusclassName = getStatusClassName(row["Proposal status"]);
-          return (
-            <span className={StatusclassName}>{row["Proposal status"]}</span>
-          );
+          const StatusclassName = getStatusClassName(row["Status"]);
+          return <span className={StatusclassName}>{row["Status"]}</span>;
         }
       //--------------------------------------------------------------------------------------------------
       case "Voting end":
@@ -213,7 +234,7 @@ const JsonTableRow = ({
                 ))}
               </ul>
             ) : (
-              <div className="category-item">{row[column]}</div>
+              <div>{row[column]}</div>
             )}
           </div>
         );
@@ -252,7 +273,9 @@ const JsonTableRow = ({
                 rel="noopener noreferrer"
                 style={{ color: "rgb(13, 146, 77, 1)" }}
               >
-                <RiCheckFill style={{ fontSize: "large" }} />
+                {/*<RiCheckFill style={{ fontSize: "large" }} />*/}
+                <RiSearchLine />
+                <RiArrowRightLine />
               </a>
             ) : (
               <></> // Render an empty cell for non-"Yes" values
@@ -260,7 +283,7 @@ const JsonTableRow = ({
           </td>
         );
 
-      case "Updates Nb":
+      case "Nb":
         return (
           <td key={column} className="row-style">
             {row[column] === 0 ? (
@@ -293,7 +316,10 @@ const JsonTableRow = ({
             {Array.isArray(row[column]) && Array.isArray(row["Twitter links"])
               ? row[column].map((name, index) => (
                   <React.Fragment key={index}>
-                    {row["Twitter links"][index] ? (
+                    {row["Twitter links"][index] &&
+                    row["Twitter links"][index].includes(
+                      "https://twitter.com/"
+                    ) ? (
                       <a
                         href={row["Twitter links"][index]}
                         target="_blank"
@@ -301,6 +327,18 @@ const JsonTableRow = ({
                         className="team-link"
                       >
                         {name.trim()} <RiTwitterXFill />
+                      </a>
+                    ) : row["Twitter links"][index] &&
+                      row["Twitter links"][index].includes(
+                        "https://warpcast.com/"
+                      ) ? (
+                      <a
+                        href={row["Twitter links"][index]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="team-link"
+                      >
+                        {name.trim()} <FaArchway />
                       </a>
                     ) : (
                       <span>{name.trim()}</span>
@@ -324,7 +362,8 @@ const JsonTableRow = ({
         const cellValue = row[column];
         if (
           (cellValue === 0 || cellValue === "0") &&
-          ["ETH", "USDC", "Total value", "True cost"].includes(column)
+          ["ETH", "USDC"].includes(column) &&
+          showCostsGroup
         ) {
           return (
             <td className="col-financial" key={column}>
@@ -354,104 +393,16 @@ const JsonTableRow = ({
           (nounsTokenColumns.includes(column) && !showNounsTokensGroup) ||
           (walletsColumns.includes(column) && !showWalletsGroup) ||
           (txColumns.includes(column) && !showTxGroup) ||
+          (costsColumns.includes(column) && !showCostsGroup) ||
           invisibleColumns.includes(column)
         ) {
           return null;
         }
 
-        const isXSmallColumn =
-          column === "#" || column === "Tx" || column === "Block";
-
-        const isTitleColumn =
-          column === "Proposal title" ||
-          column === "Transactions details" ||
-          column === "Transactions Notes" ||
-          column === "Proposer" ||
-          column === "Sponsor" ||
-          column === "Team";
-
-        const isSmallColumn =
-          column === "Stream" ||
-          column === "Updates" ||
-          column === "Nouns Voting" ||
-          column === "Nouns For" ||
-          column === "Nouns Against" ||
-          column === "Nouns Abstain" ||
-          column === "Quorum" ||
-          column === "Nouns Turnout" ||
-          column === "Wallets Voting" ||
-          column === "Wallets For" ||
-          column === "Wallets Against" ||
-          column === "Wallets Abstain" ||
-          column === "Wallets Turnout" ||
-          column === "Updates Nb";
-
-        const isFinancialColumn =
-          column === "ETH" ||
-          column === "USDC" ||
-          column === "Total value" ||
-          column === "True cost" ||
-          column === "Nouns ID" ||
-          column === "Includes Nouns";
-
-        const isMediumColumn =
-          column === "Category" || column === "Former candidate";
-
-        const isXMediumColumn =
-          column === "Outcome" || column === "Proposal status";
-
-        const isLargeColumn =
-          column === "Nouns vote" || column === "Wallets vote";
-
-        // Determine the class based on the column
-        let columnClass = "";
-
-        if (isXSmallColumn) {
-          columnClass = "col-xs";
-        }
-        if (isSmallColumn) {
-          columnClass = "col-small";
-        }
-        if (isMediumColumn) {
-          columnClass = "col-medium";
-        }
-
-        if (isXMediumColumn) {
-          columnClass = "col-Xmedium";
-        }
-
-        if (isLargeColumn) {
-          columnClass = "col-large";
-        }
-        if (isTitleColumn) {
-          columnClass = "col-title";
-        }
-
-        if (isFinancialColumn) {
-          columnClass = "col-financial";
-        }
+        let columnClass = getColumnClassUtils(column); // Use the utility function
 
         return (
-          <td
-            className={
-              isXSmallColumn
-                ? "col-xs"
-                : isSmallColumn
-                ? "col-small"
-                : isTitleColumn
-                ? "col-title"
-                : isMediumColumn
-                ? "col-medium"
-                : isXMediumColumn
-                ? "col-Xmedium"
-                : isLargeColumn
-                ? "col-large"
-                : isFinancialColumn
-                ? "col-financial"
-                : ""
-            }
-            key={column}
-          >
+          <td className={columnClass} key={column}>
             {renderCellContent(column, row)}{" "}
           </td>
         );

@@ -43,9 +43,9 @@
   .filter-popup-columns-team{
     column-count: 6; /* Number of columns */
     column-gap: 10px; /* Space between columns */
-    max-height: 800px; /* Maximum height of the column container */
+    max-height: 600px; /* Maximum height of the column container */
     overflow-y: auto; /* Enable scrolling if content overflows */
-    margin: 20px;
+    margin: 10px;
 
   }
   

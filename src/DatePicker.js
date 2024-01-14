@@ -14,7 +14,7 @@ const DatePicker = ({ onDateChange }) => {
     onDateChange(startDate, e.target.value);
   };
 
-  const [startDate, setStartDate] = useState("2021-10-01");
+  const [startDate, setStartDate] = useState("2021-10-15");
   const [endDate, setEndDate] = useState(
     new Date().toISOString().split("T")[0]
   );
@@ -27,7 +27,7 @@ const DatePicker = ({ onDateChange }) => {
           id="start-date"
           value={startDate}
           onChange={(e) => setStartDate(e.target.value)}
-          min="2021-10-01"
+          min="2021-10-15"
         />
       </div>
       <div className="date-picker">

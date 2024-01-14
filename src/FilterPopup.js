@@ -46,7 +46,7 @@ const FilterPopup = ({
       : [...selectedFilters, value];
     setSelectedFilters(updatedFilters);
   };
-
+  /*
   const countUniqueStringsInArrayOfArrays = (data, columnName) => {
     // Flatten the array of string arrays into a single array
     const flattenedArray = data.reduce((acc, row) => {
@@ -60,7 +60,7 @@ const FilterPopup = ({
     // Use a Set to find unique values
     const uniqueValues = new Set(flattenedArray);
     return uniqueValues.size;
-  };
+  };*/
 
   useEffect(() => {
     function handleClickOutside(event) {
