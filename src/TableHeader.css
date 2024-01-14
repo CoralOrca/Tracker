@@ -71,11 +71,11 @@ button {
 .triangle-right {
   border-width: 6px 0 6px 7px;
   border-color: transparent transparent transparent #4b5259;
-  right: -5px;
+  right: -3px;
 }
 
 .triangle-left {
   border-width: 6px 7px 6px 0;
   border-color: transparent #4b5259 transparent transparent;
-  right: -5px;
+  right: -3px;
 }

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import JsonTable from "./JsonTable";
 import jsonData from "./OnChain.json"; // Import your JSON file
 import GenericPieChart from "./GenericPieChart";
-import DatePicker from "./DatePicker";
 import {
   processDataAllPie,
   processDataForSucceededPie,
@@ -125,9 +124,6 @@ const App = () => {
           </div>
         </div>
         <div className="search-wrapper">
-          {/*<div>
-            <DatePicker />
-          </div>*/}
           <div>
             <input
               className="search-widget"

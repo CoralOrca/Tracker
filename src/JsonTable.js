@@ -89,6 +89,7 @@ const JsonTable = ({ jsonData, searchTerm }) => {
   // Render the table rows based on applied filters
   const filteredData = getFilteredData();
   //------------------------------------------------------------------------------
+
   const handleSort = (columnName) => {
     // Check if the clicked column is "#"
     if (columnName === "#") {
@@ -103,7 +104,7 @@ const JsonTable = ({ jsonData, searchTerm }) => {
       }
     } else {
       // For all other columns, toggle between 'asc' and 'desc'
-      const newSortOrder = sortOrder === "asc" ? "desc" : "desc";
+      const newSortOrder = sortOrder === "asc" ? "desc" : "asc";
       setSortOrder(newSortOrder);
       setData((prevData) => sortData(prevData, columnName, newSortOrder));
     }

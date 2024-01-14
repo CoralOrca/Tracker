@@ -30,13 +30,12 @@ const getColumnClassUtils = (column) => {
       "Wallets Turnout",
       "Block",
       "Nb",
-      "True cost",
     ].includes(column)
   ) {
     return "col-small";
   }
   /*-------------------------------------------*/
-  if (["Former candidate"].includes(column)) {
+  if (["Former candidate", "True cost"].includes(column)) {
     return "col-medium";
   }
   /*-------------------------------------------*/
