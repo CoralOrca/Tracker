@@ -6,9 +6,7 @@ const getColumnClassUtils = (column) => {
   }
   /*-------------------------------------------*/
   if (
-    ["Proposal title", "Transactions details", "Team", "Voting end"].includes(
-      column
-    )
+    ["Proposal title", "Transactions details", "Team", "Notes"].includes(column)
   ) {
     return "col-title";
   }
@@ -57,7 +55,7 @@ const getColumnClassUtils = (column) => {
     return "col-financial";
   }
   /*-------------------------------------------*/
-  if (["Proposer", "Sponsor"].includes(column)) {
+  if (["Proposer", "Sponsor", "Voting end"].includes(column)) {
     return "col-people";
   }
 

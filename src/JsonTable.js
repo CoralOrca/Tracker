@@ -10,7 +10,7 @@ const JsonTable = ({ jsonData, searchTerm }) => {
   const [data, setData] = useState([]);
   const [columns, setColumns] = useState([]);
   const [sortColumn, setSortColumn] = useState(null);
-  const [sortOrder, setSortOrder] = useState("desc");
+  const [sortOrder, setSortOrder] = useState("asc");
   const [showNounsTokensGroup, setShowNounsTokensGroup] = useState(false);
   const [showWalletsGroup, setShowWalletsGroup] = useState(false);
   const [showTxGroup, setShowTxGroup] = useState(false);
@@ -91,23 +91,9 @@ const JsonTable = ({ jsonData, searchTerm }) => {
   //------------------------------------------------------------------------------
 
   const handleSort = (columnName) => {
-    // Check if the clicked column is "#"
-    if (columnName === "#") {
-      // If it is, and the sortOrder is 'desc' or not set, set it directly to 'asc'
-      if (sortOrder === "desc" || !sortOrder) {
-        setSortOrder("asc");
-        setData((prevData) => sortData(prevData, columnName, "asc"));
-      } else {
-        // If sortOrder is 'asc', change it to 'desc'
-        setSortOrder("desc");
-        setData((prevData) => sortData(prevData, columnName, "desc"));
-      }
-    } else {
-      // For all other columns, toggle between 'asc' and 'desc'
-      const newSortOrder = sortOrder === "asc" ? "desc" : "asc";
-      setSortOrder(newSortOrder);
-      setData((prevData) => sortData(prevData, columnName, newSortOrder));
-    }
+    const newSortOrder = sortOrder === "asc" ? "desc" : "asc";
+    setSortOrder(newSortOrder);
+    setData((prevData) => sortData(prevData, columnName, newSortOrder));
 
     // Always update the sortColumn
     setSortColumn(columnName);

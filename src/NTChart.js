@@ -25,7 +25,7 @@ const NTChart = ({
           className="stacked-bar for"
           style={{
             width: forPercentage, // Set width as a percentage
-            background: "rgb(13, 146, 77, 0.75)",
+            background: "rgb(7, 186, 116, 0.85)",
           }}
         ></div>
         <div className="label">{forValue}</div>
@@ -37,7 +37,7 @@ const NTChart = ({
           className="stacked-bar against"
           style={{
             width: againstPercentage, // Set width as a percentage
-            background: "rgb(206, 37, 71, 0.75)",
+            background: "rgb(241,46,92, 0.85)",
           }}
         ></div>
         <div className="label">{againstValue}</div>
@@ -49,12 +49,11 @@ const NTChart = ({
           className="stacked-bar abstain"
           style={{
             width: abstainPercentage, // Set width as a percentage
-            background: "rgb(110, 110, 110, 0.75)",
+            background: "rgb(130, 137, 134, 0.85)",
           }}
         ></div>
         <div className="label">{abstainValue}</div>
       </div>
-
       {/* Other elements */}
       {quorumValue > 0 && (
         <div className="quorum-bar">
@@ -65,8 +64,8 @@ const NTChart = ({
               background: "none",
               borderRight: "1px solid",
               borderColor: "rgb(90, 90, 90,0.5)",
-              marginTop: "-36px",
-              height: "36px",
+              marginTop: "-40px",
+              height: "40px",
             }}
           ></div>
         </div>

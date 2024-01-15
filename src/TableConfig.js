@@ -142,21 +142,21 @@ export const costsColumns = [
 ];
 
 export const colorsForFirstChart = [
-  "rgb(206, 37, 71)",
-  "rgb(13, 146, 77)",
-  "rgb(110, 110, 110)",
-  "rgb(232, 74, 106)",
-  "rgb(0, 0, 0)",
-  "rgb(50, 50, 50)",
+  "rgb(241,46,92)", //Quorum
+  "rgb(7, 186, 116)",
+  "rgb(130, 137, 134)", //canceled
+  "rgb(241,46,92)", //against
+  "rgb(53, 54, 53)", //vetoed
+  "rgb(130, 137, 134)", //expired
 ];
 
 export const colorsForSecondChart = [
-  "rgb(58, 172, 155)",
-  "rgb(13, 146, 77)",
-  "rgb(119, 119, 119)",
-  "rgb(232, 74, 106)",
-  "rgb(255, 160, 18)",
-  "rgb(50, 50, 50)",
+  "rgb(43,220, 151)", //
+  "rgb(7, 186, 116)", //success
+  "rgb(130, 137, 134)", //cancelled
+  "rgb(53, 54, 53)", //uncertain
+  "rgb(255, 180, 61)", //behind
+  "rgb(53, 54, 53)", //abandonned
 ];
 
 export const colorsForThirdChart = [

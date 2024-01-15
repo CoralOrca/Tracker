@@ -156,6 +156,8 @@ export const getOutcomeClassName = (outcome) => {
       return "succeeded";
     case "<Quorum":
       return "noQuorum";
+    case "Expired":
+      return "expired";
     default:
       return "";
   }
@@ -173,6 +175,8 @@ export const getIndexClassName = (outcome) => {
       return "index-succeeded";
     case "<Quorum":
       return "index-noQuorum";
+    case "Expired":
+      return "index-expired";
     default:
       return "";
   }
