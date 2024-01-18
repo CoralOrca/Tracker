@@ -64,17 +64,17 @@ const App = () => {
             </a>
           </div>
           <div className="data-from">
-            Inspired by{" "}
+            Inspired by{}
             <a
               href="https://maty-eth.notion.site/maty-eth/Proposal-Dashboard-39838dbdffa84184a436d4b562aaf55d"
               target="_blank"
               rel="noopener noreferrer"
             >
-              proposals.wtf{" "}
+              proposals.wtf{}
             </a>
           </div>
           <div className="data-from">
-            Data from{" "}
+            Data from{}
             <a
               href="https://twitter.com/matyETH"
               target="_blank"
@@ -82,7 +82,7 @@ const App = () => {
             >
               Maty
             </a>
-            , {/* Replace # with Maty's URL */}
+            , {}
             <a
               href="https://www.updates.wtf/"
               target="_blank"
@@ -96,7 +96,7 @@ const App = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {" "}
+              {}
               Coralorca
             </a>
           </div>
@@ -141,7 +141,6 @@ const App = () => {
       </main>
       <footer className="App-footer">
         <p>⌐◨-◨ 2024 by Coralorca. Zero rights reserved.</p>
-        {/* Add more content here as needed */}
       </footer>
     </div>
   );

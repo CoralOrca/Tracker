@@ -3,11 +3,9 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import { ArcElement, Tooltip, Legend, CategoryScale, Chart } from "chart.js";
 
-// Register the necessary components for Pie chart
 Chart.register(ArcElement, Tooltip, Legend, CategoryScale);
 
 const GenericPieChart = ({ labels, data, title, colors }) => {
-  // Function to adjust opacity of an RGB color
   const adjustOpacity = (color, opacity) => {
     return color.replace(/rgb\(([^)]+)\)/, `rgba($1, ${opacity})`);
   };
