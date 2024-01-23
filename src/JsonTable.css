@@ -22,7 +22,7 @@ table {
   /*background-color: rgb(108, 111, 122);*/
   background-color: white;
   z-index: 10;
-  width: 2166px;
+  width: 3456px;
 }
 
 .sum-row {
@@ -37,7 +37,7 @@ table {
 /* Ensure the table layout is fixed so the column widths don't change */
 table {
   table-layout: fixed;
-  width: 120%;
+  width: 3456px;
 }
 
 .col-xs {
