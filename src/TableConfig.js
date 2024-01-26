@@ -142,10 +142,9 @@ export const costsColumns = [
 ];
 
 export const colorsForFirstChart = [
-  "rgb(241,46,92)", //Quorum
-  "rgb(7, 186, 116)",
+  "rgb(241,46,92)", //defeated
+  "rgb(7, 186, 116)", //succeeded
   "rgb(130, 137, 134)", //canceled
-  "rgb(241,46,92)", //against
   "rgb(53, 54, 53)", //vetoed
   "rgb(130, 137, 134)", //expired
 ];

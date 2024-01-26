@@ -16,20 +16,20 @@ export const calculateColumnSum = (data, columnName) => {
 };
 
 // Utility function to render the title with a TLDR popup
-export const renderTitle = (row) => (
+export const renderTLDR = (row) => (
   <div className="title-container">
     <span className="Proposal title">{row["Proposal title"]}</span>
-    <div className="tldr-popup">
-      {row["TLDR"]}
-      <a
-        href={`https://www.nouns.camp/proposals/${row["#"]}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="read-more-link"
-      >
-        --> Read more
-      </a>
-    </div>
+    <a
+      href={`https://www.nouns.camp/proposals/${row["#"]}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="popup-link"
+    >
+      <div className="tldr-popup">
+        {row["TLDR"]}
+        <span className="read-more-text">--> Read more</span>
+      </div>
+    </a>
   </div>
 );
 
@@ -154,8 +154,6 @@ export const getOutcomeClassName = (outcome) => {
       return "canceled";
     case "Succeeded":
       return "succeeded";
-    case "<Quorum":
-      return "noQuorum";
     case "Expired":
       return "expired";
     default:
@@ -173,8 +171,6 @@ export const getIndexClassName = (outcome) => {
       return "index-canceled";
     case "Succeeded":
       return "index-succeeded";
-    case "<Quorum":
-      return "index-noQuorum";
     case "Expired":
       return "index-expired";
     default:

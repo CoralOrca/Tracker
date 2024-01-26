@@ -8,7 +8,7 @@ import {
 } from "react-icons/ri";
 import { FaArchway } from "react-icons/fa";
 import {
-  renderTitle,
+  renderTLDR,
   renderNTChart,
   renderNTChart2,
   renderTxNb,
@@ -54,7 +54,7 @@ const JsonTableRow = ({
         );
       //--------------------------------------------------------------------------------------------------
       case "Proposal title":
-        return <td key={column}>{renderTitle(row)}</td>;
+        return <td key={column}>{renderTLDR(row)}</td>;
       //--------------------------------------------------------------------------------------------------
       case "Category":
         return (
@@ -196,9 +196,7 @@ const JsonTableRow = ({
       case "Status":
         const statusOutcome = row["Outcome"];
         if (
-          ["Canceled", "Expired", "Defeated", "Vetoed", "<Quorum"].includes(
-            statusOutcome
-          )
+          ["Canceled", "Expired", "Defeated", "Vetoed"].includes(statusOutcome)
         ) {
           // Return an empty cell if the Outcome is one of the specified values
           return <td key={column}>&nbsp;</td>;

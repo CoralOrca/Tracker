@@ -2,57 +2,21 @@
   text-align: center;
   font-family: 'Inter';
 }
+
 .App-header {
- /* Ensure your header has full width */
-
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  height: 350px;
+  height: 400px;
 }
+
 body {
   font-family: 'Inter', sans-serif;
- /* Fallback to sans-serif if Inter is not available */
-}
-.Logo-header {
-  width: 100px; 
-  height: auto; 
-  margin-left: 25px;
-  margin-top: 25px;
-}
-
-@media (max-width: 768px) { 
-  .Logo-header {
-    width: 50px; 
-  }
 }
 
 .Refresh-icon{
   margin-left:20px;
 }
-
 .Refresh-icon:hover {
   cursor: pointer;
-}
-
-.header-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding-right: 20px;
-  text-align: right;
-  margin-top: 35px;
-}
-
-.built-by, .data-from {
-  margin-right: 20px;
-  font-size: x-small;
-}
-@media (max-width: 768px) { 
-  .built-by, .data-from {
-  font-size: xx-small;
-  }
 }
 
 .App-footer {
@@ -64,24 +28,46 @@ body {
   font-size: small;
 }
 
-/***********************************************************************Pie*/
+/***********************************************************************Search*/
+.top-left-container {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
+.search-wrapper {
+  margin-left: 10px; /* Adjust as needed for spacing */
+  display: flex;
+  align-items: center;
+}
+
+.search-widget{
+  display:inline-block;
+  height: 30px;
+  width:200px;
+  border: 1px solid rgba(	75,	82,	89,0.25);
+}
+
+/***********************************************************************Pie*/
 .pie-parent-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto; /* for horizontal centering if parent is not flex */
 }
 
 .pie-chart-container {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin-top: 30px;
 }
 
 .pie-chart-diagram{
   margin: 20px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 .pie-title {
@@ -93,24 +79,35 @@ body {
   align-items: center;
 }
 
-
-.search-wrapper{
-  position: absolute;
-  display: flex;
-  top: 300px;
-  left: 75px;
-  margin-bottom: 10px;
-}
-
-.search-widget{
-  display:inline-block;
-  height: 30px;
-  width:270px;
-  border: 1px solid rgba(	75,	82,	89,0.25);
-}
-
-
 /***********************************************************************media*/
+
+@media (max-width: 1200px) { 
+  .pie-chart-container {
+    width: 180px;
+    height: 180px;
+    margin-top: 50px;
+  }
+
+  .pie-chart-diagram{
+    margin: 20px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .pie-title {
+    font-size: x-small;
+    font-size: small;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-15px);
+  }
+}
+
+
+
 
 @media (max-width: 700px) { 
   .pie-chart-container {
@@ -135,15 +132,6 @@ body {
     align-items: center;
     transform: translateY(-15px);
   }
-
-  .search-wrapper{
-    left: 15px;
-  }
-
-  .search-widget{
-    width:120px;
-    
-  }
 }
 
 
@@ -159,16 +147,7 @@ body {
     width: 100px;
     height: 100px;
   }
-
-  .search-wrapper{
-    left: 15px;
-  }
-  .search-widget{
-    width:120px;
-    
-  }
 }
-
 
 @media (max-width: 375px) { 
   .pie-chart-container {
@@ -176,13 +155,26 @@ body {
     height: 120px;
     margin-top: 50px;
   }
-
-  .search-widget{
-    width:100px;
-  }
-
-  .search-wrapper{
-    left: 15px;
-  }
 }
 
+/*------------credits--------------------------------------------------------------------*/
+
+.header-right {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding-right: 20px;
+  text-align: left;
+  margin-top: 35px;
+}
+
+.built-by, .data-from {
+  margin-right: 20px;
+  font-size: x-small;
+}
+@media (max-width: 768px) { 
+  .built-by, .data-from {
+    margin-right: 0px;
+  font-size: xx-small;
+  }
+}

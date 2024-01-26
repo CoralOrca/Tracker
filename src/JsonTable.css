@@ -25,6 +25,21 @@ table {
   width: 3456px;
 }
 
+/* Ensure the table layout is fixed so the column widths don't change */
+table {
+  table-layout: fixed;
+  width: 3456px;
+}
+
+@media (max-width: 1920px) { 
+  .fixed-header {
+    width: 1920px;
+  }
+  table {
+    width: 1920px;
+  }
+}
+
 .sum-row {
   background-color: #4b5259!important;
   font-size: 0.7rem;
@@ -32,12 +47,6 @@ table {
   box-shadow: 0px 3px 3px 0px rgba(58, 59, 60, 0.5);
   z-index: -1000;
   color: white;
-}
-
-/* Ensure the table layout is fixed so the column widths don't change */
-table {
-  table-layout: fixed;
-  width: 3456px;
 }
 
 .col-xs {
@@ -48,7 +57,6 @@ table {
   width: 90px; /* or your preferred narrow width */
 }
 
-
 tr:nth-child(odd) .col-financial {
   background-color: #d4d7d9;
 }
@@ -57,27 +65,22 @@ tr:nth-child(even) .col-financial {
   background-color: #c4c7cd; 
 }
 
-
 /*************************************************************************************************************************************/
 .col-small {
   width: 100px;
 }
-
 .col-medium {
   width: 110px; 
 }
 .col-Xmedium {
   width: 110px; 
 }
-
 .col-large {
   width: 150px; 
 }
-
 .col-title {
   width: 260px; 
 }
-
 .col-people{
   width: 160px; 
 }
@@ -123,9 +126,6 @@ tr:nth-child(even) {
   background-color: rgba(7, 186, 116, 0.75); 
 }
 
-.noQuorum {
-  background-color: rgba(241,46,92, 0.75);
-}
 
 .succeeded::after {
   content: ''; /* Essential for displaying the pseudo-element */
@@ -162,13 +162,8 @@ tr:nth-child(even) {
   background-color: rgba(7, 186, 116, 0.9); 
 }
 
-.index-noQuorum {
-  background-color: rgba(241,46,92, 0.85);
-}
-
 .index-defeated:hover,
 .index-canceled:hover,
-.index-noQuorum:hover,
 .index-succeeded:hover {
   font-weight: 600;
   padding: 7px 12px;
@@ -206,43 +201,33 @@ tr:nth-child(even) {
 .category-tech {
   background-color: rgba(54, 90, 231,0.71);
 }
-
 .category-art {
   background-color: rgba(75, 50, 236,0.71);
 }
-
 .category-community {
   background-color: rgba(59, 148, 227,0.71);
 }
-
 .category-droposal{
   background-color: rgba(204, 41, 245,0.71);
 }
-
 .category-charity{
   background-color: rgba(61, 176, 225,0.71);
 }
-
 .category-investment{
   background-color: rgba(240, 38, 247,0.71);
 }
-
 .category-marketing{
   background-color: rgba(52, 58, 234,0.71);
 }
-
 .category-other{
   background-color: rgba(136, 45, 240,0.71);
 }
-
 .category-operations{
   background-color: rgba(56, 120, 229,0.71);
 }
-
 .category-physical{
   background-color: rgb(105, 47, 238,0.71);
 }
-
 .category-staking{
   background-color: rgba(169, 43, 243,0.71);
 }
@@ -270,31 +255,42 @@ tr:nth-child(even) {
   font-weight: 500;
 }
 
-
 .title-container {
   position: relative;
   cursor: pointer;
 }
 
+.title-container .popup-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits the text color */
+}
+
 .title-container .tldr-popup {
   visibility: hidden;
-  width: 300px; /* Adjust the width as needed */
+  width: 500px;
   background-color: #f0f1f5;
   color: black;
   text-align: left;
-  font-size:small;
+  font-size: small;
   border-radius: 6px;
-  padding: 15px 15px;
+  padding: 15px;
   position: absolute;
+  transform: translateX(100px);
   z-index: 1;
   top: 100%;
   left: 50%;
-  margin-left: -100px; /* Adjust the margin to center the popup */
+  margin-left: -100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 }
 
 .title-container:hover .tldr-popup {
   visibility: visible;
+}
+
+.title-container .read-more-text {
+  display: block; /* Ensures the read more text is on a new line */
+  margin-top: 10px; /* Adds space above the read more text */
+  font-weight: 500;
 }
 
 .column-links {
@@ -320,32 +316,25 @@ tr:nth-child(even) {
 .status-completed{
   background-color: rgba(7, 186, 116, 0.75); 
 }
-
 .status-onSchedule{
   background-color: rgba(7, 186, 116, 0.75); 
 }
-
 .status-behind{
   background-color: rgba(255, 180, 61, 0.75); 
 }
-
 .status-canceled{
   background-color: rgba(130, 137, 134, 0.75); 
 }
-
 .status-abandoned{
   background-color: rgba(53, 54, 53, 0.75); 
 }
-
 .status-uncertain{
   background-color: rgba(53, 54, 53, 0.75); 
 }
-
 .more-items-popover {
   position: relative;
   cursor: pointer;
 }
-
 .popover-content {
   visibility: hidden;
   width: 120px;
