@@ -98,7 +98,6 @@ tr:nth-child(even) {
   background-color: #f4f7fc; /*darker*/
 }
 
-
 /**************************************************************************************************************************************Outcome**/
 .defeated, .canceled, .succeeded, .noQuorum, .expired {
   display: inline-block;
@@ -125,8 +124,6 @@ tr:nth-child(even) {
 .succeeded {
   background-color: rgba(7, 186, 116, 0.75); 
 }
-
-
 
 /**************************************************************************************************************************************Index**/
 .index-defeated, .index-canceled, .index-succeeded, .index-noQuorum, .index-expired {
