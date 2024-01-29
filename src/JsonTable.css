@@ -127,15 +127,6 @@ tr:nth-child(even) {
 }
 
 
-.succeeded::after {
-  content: ''; /* Essential for displaying the pseudo-element */
-  position: absolute; /* Positions the pseudo-element relative to its parent */
-  left: 100%; /* Positions the start of the line at the end of the pill */
-  top: 50%; /* Aligns the top of the line to the middle of the pill */
-  border-top: 2px solid rgba(7, 186, 116, 0.5); /* Style of the line */
-  width: 35px; /* Length of the line */
-  transform: translateY(-50%); /* Centers the line vertically */
-}
 
 /**************************************************************************************************************************************Index**/
 .index-defeated, .index-canceled, .index-succeeded, .index-noQuorum, .index-expired {
