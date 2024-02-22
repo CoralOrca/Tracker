@@ -67,7 +67,7 @@ const App = () => {
           <GenericPieChart
             labels={labels2}
             data={data2}
-            title={`${succeededCount} passed representing ${totalCosts}$`}
+            title={`${succeededCount} passed representing $${totalCosts}`}
             colors={colorsForSecondChart}
           />
           <GenericPieChart

@@ -25,11 +25,23 @@ const GenericPieChart = ({ labels, data, title, colors }) => {
   const options = {
     plugins: {
       legend: {
-        display: false, // Ensure legend is displayed
-        position: "bottom", // Position of legend, can be 'top', 'bottom', 'left', 'right'
+        display: false, // Ensure legend is not displayed
       },
       tooltip: {
         enabled: true, // Enable tooltips
+        callbacks: {
+          // This function allows you to add to the tooltip text
+          afterBody: (tooltipItems) => {
+            // Calculate the total of all data points
+            const total = data.reduce((acc, value) => acc + value, 0);
+            // Calculate and return the percentage of the current slice
+            const percentage = (
+              (data[tooltipItems[0].dataIndex] / total) *
+              100
+            ).toFixed(2);
+            return `${percentage}%`;
+          },
+        },
       },
     },
   };

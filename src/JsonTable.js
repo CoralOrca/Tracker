@@ -36,9 +36,37 @@ const JsonTable = ({ jsonData, searchTerm }) => {
     }
   }, [jsonData]);
   //--------------------------------------------------------------------------
+
+  // Utility function to parse the search term
+  const parseSearchTerm = (searchTerm) => {
+    const parts = searchTerm.split(/\s+/); // Split by whitespace to get parts
+    const criteria = {
+      fields: {}, // Object to hold specific field searches
+      general: [], // Array to hold general search terms
+    };
+
+    parts.forEach((part) => {
+      if (part.includes(":")) {
+        const [field, value] = part.split(":");
+        if (criteria.fields[field]) {
+          criteria.fields[field].push(value.toLowerCase());
+        } else {
+          criteria.fields[field] = [value.toLowerCase()];
+        }
+      } else {
+        criteria.general.push(part.toLowerCase());
+      }
+    });
+
+    return criteria;
+  };
+
   const getFilteredData = () => {
-    // Apply filters first
+    // Parse the search term to get structured search criteria
+    const { fields, general } = parseSearchTerm(searchTerm);
+
     let filteredData = data.filter((row) => {
+      // Apply filters first
       for (const column in activeFilters) {
         const filterValues = activeFilters[column];
         if (filterValues.length > 0) {
@@ -60,34 +88,29 @@ const JsonTable = ({ jsonData, searchTerm }) => {
           }
         }
       }
-      return true; // Keep this row if it passes all filters
-    });
 
-    // Then, apply search logic if there is a search term
-    if (searchTerm) {
-      const searchLower = searchTerm.toLowerCase();
-      filteredData = filteredData.filter((row) => {
-        return (
-          row["#"].toString().toLowerCase().includes(searchLower) ||
-          (row["Proposal title"] &&
-            row["Proposal title"].toLowerCase().includes(searchLower)) ||
-          (row["Proposer"] &&
-            row["Proposer"].toLowerCase().includes(searchLower)) ||
-          (row["Sponsor"] &&
-            row["Sponsor"].toLowerCase().includes(searchLower)) ||
-          (Array.isArray(row["Team"]) &&
-            row["Team"].some((name) =>
-              name.toLowerCase().includes(searchLower)
-            ))
+      // Apply advanced search logic
+      const fieldCriteriaMet = Object.keys(fields).every((field) =>
+        fields[field].some(
+          (value) =>
+            row[field] && row[field].toString().toLowerCase().includes(value)
+        )
+      );
+
+      const generalCriteriaMet =
+        general.length === 0 ||
+        general.every((term) =>
+          Object.values(row).some((value) =>
+            value.toString().toLowerCase().includes(term)
+          )
         );
-      });
-    }
+
+      return fieldCriteriaMet && generalCriteriaMet;
+    });
 
     return filteredData;
   };
 
-  // Render the table rows based on applied filters
-  const filteredData = getFilteredData();
   //------------------------------------------------------------------------------
 
   const handleSort = (columnName) => {
@@ -104,6 +127,9 @@ const JsonTable = ({ jsonData, searchTerm }) => {
   const toggleWalletsGroup = () => setShowWalletsGroup((prev) => !prev);
   const toggleTxGroup = () => setShowTxGroup((prev) => !prev);
   const toggleCostsGroup = () => setShowCostsGroup((prev) => !prev);
+
+  // Render the table rows based on applied filters
+  const filteredData = getFilteredData();
 
   return (
     <div>
