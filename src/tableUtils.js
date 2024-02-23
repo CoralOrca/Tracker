@@ -156,6 +156,8 @@ export const getOutcomeClassName = (outcome) => {
       return "succeeded";
     case "Expired":
       return "expired";
+    case "Ongoing":
+      return "ongoing";
     default:
       return "";
   }
@@ -173,6 +175,8 @@ export const getIndexClassName = (outcome) => {
       return "index-succeeded";
     case "Expired":
       return "index-expired";
+    case "Ongoing":
+      return "index-ongoing";
     default:
       return "";
   }
@@ -204,7 +208,7 @@ export const countUniqueStringsInArrayOfArrays = (data, columnName) => {
   return uniqueValues.size;
 };
 
-// Function to get the CSS class name based on the ostatus
+// Function to get the CSS class name based on the status
 export const getStatusClassName = (status) => {
   switch (status) {
     case "On-schedule":
@@ -221,6 +225,8 @@ export const getStatusClassName = (status) => {
       return "status-uncertain";
     case "canceled":
       return "status-canceled";
+    case "Ongoing":
+      return "status-ongoing";
     default:
       return "";
   }

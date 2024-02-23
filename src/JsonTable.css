@@ -99,7 +99,7 @@ tr:nth-child(even) {
 }
 
 /**************************************************************************************************************************************Outcome**/
-.defeated, .canceled, .succeeded, .noQuorum, .expired {
+.defeated, .canceled, .succeeded, .noQuorum, .expired, .ongoing {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 15px;
@@ -108,25 +108,24 @@ tr:nth-child(even) {
   background-color: inherit;
   position: relative; /* Establishes a containing block for absolute positioning */
 }
-
 .defeated {
   background-color: rgba(241,46,92, 0.75);
 }
-
 .canceled {
   background-color: rgba(130, 137, 134, 0.75);
 }
-
 .expired {
   background-color: rgba(130, 137, 134, 0.75);
 }
-
 .succeeded {
   background-color: rgba(7, 186, 116, 0.75); 
 }
+.ongoing {
+  background-color: rgba(0, 0, 0, 0.75); 
+}
 
 /**************************************************************************************************************************************Index**/
-.index-defeated, .index-canceled, .index-succeeded, .index-noQuorum, .index-expired {
+.index-defeated, .index-canceled, .index-succeeded, .index-noQuorum, .index-expired, .index-ongoing {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 30px;
@@ -148,6 +147,10 @@ tr:nth-child(even) {
 }
 .index-succeeded{
   background-color: rgba(7, 186, 116, 0.9); 
+}
+
+.index-ongoing{
+  background-color: rgba(0, 0, 0, 0.9); 
 }
 
 .index-defeated:hover,
@@ -218,6 +221,15 @@ tr:nth-child(even) {
 }
 .category-staking{
   background-color: rgba(169, 43, 243,0.71);
+}
+.category-content{
+  background-color: rgba(24, 30, 192, 0.71);
+}
+.category-sport{
+  background-color: rgba(76, 48, 218, 0.71);
+}
+.category-food{
+  background-color: rgba(164, 48, 218, 0.71);
 }
 /*----------------------------------------------------------------------*/
 
@@ -292,7 +304,7 @@ tr:nth-child(even) {
   text-align: center;
 }
 /*************************************************************************************************************************************STATUS*/
-.status-completed, .status-onSchedule, .status-canceled, .status-behind, .status-abandoned, .status-uncertain {
+.status-completed, .status-onSchedule, .status-canceled, .status-behind, .status-abandoned, .status-uncertain, .status-ongoing {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 15px;
@@ -318,6 +330,9 @@ tr:nth-child(even) {
 }
 .status-uncertain{
   background-color: rgba(53, 54, 53, 0.75); 
+}
+.status-ongoing{
+  background-color: rgba(0, 0, 0, 0.75); 
 }
 .more-items-popover {
   position: relative;

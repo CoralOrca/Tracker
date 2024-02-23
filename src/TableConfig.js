@@ -142,6 +142,7 @@ export const costsColumns = [
 ];
 
 export const colorsForFirstChart = [
+  "rgb(0,0,0)", //ongoing
   "rgb(241,46,92)", //defeated
   "rgb(7, 186, 116)", //succeeded
   "rgb(130, 137, 134)", //canceled

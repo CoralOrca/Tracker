@@ -159,6 +159,24 @@ const JsonTableRow = ({
         );
       //--------------------------------------------------------------------------------------------------
       case "Nouns vote":
+        // Check if the Outcome is "Ongoing" and return an empty cell if it is
+        if (row["Outcome"] === "Ongoing") {
+          return (
+            <td key={column}>
+              <div>
+                <a
+                  href={`https://www.nouns.camp/proposals/${row["#"]}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ...
+                </a>
+              </div>
+            </td>
+          ); // Renders an empty cell
+        }
+
+        // If the Outcome is not "Ongoing", render the cell content as usual
         return (
           <td key={column}>
             {renderNTChart(
@@ -172,6 +190,12 @@ const JsonTableRow = ({
         );
       //--------------------------------------------------------------------------------------------------
       case "Wallets vote":
+        // Check if the Outcome is "Ongoing" and return an empty cell if it is
+        if (row["Outcome"] === "Ongoing") {
+          return <td key={column}>&nbsp;</td>; // Renders an empty cell
+        }
+
+        // If the Outcome is not "Ongoing", render the cell content as usual
         return (
           <td key={column}>
             {renderNTChart2(
@@ -184,14 +208,20 @@ const JsonTableRow = ({
         );
       //--------------------------------------------------------------------------------------------------
       case "Outcome":
-        const className = getOutcomeClassName(row["Outcome"]);
-
-        // Check if the Outcome is "Canceled"
-        if (row["Outcome"] === "Canceled") {
+        // Check if the Status is "Ongoing" before rendering anything for Outcome
+        if (row["Status"] === "Ongoing") {
+          return <td key={column}>&nbsp;</td>; // Renders an empty cell if Status is Ongoing
+        } else {
+          // Proceed with the original logic if Status is not Ongoing
+          const className = getOutcomeClassName(row["Outcome"]);
+          // This condition seems redundant given the action is the same regardless of the outcome
+          // But if you plan to extend different behaviors for different outcomes, it's okay to keep it
+          if (row["Outcome"] === "Canceled") {
+            return <span className={className}>{row["Outcome"]}</span>;
+          }
           return <span className={className}>{row["Outcome"]}</span>;
         }
 
-        return <span className={className}>{row["Outcome"]}</span>;
       //--------------------------------------------------------------------------------------------------
       case "Status":
         const statusOutcome = row["Outcome"];
