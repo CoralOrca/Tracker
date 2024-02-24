@@ -160,15 +160,20 @@ export const colorsForSecondChart = [
 ];
 
 export const colorsForThirdChart = [
-  "rgb(61, 176, 225)", //charity
+  "rgb(56, 120, 229)", //operations
   "rgb(59, 148, 227)", //commu
-  "rgb(56, 120, 229)", //Operations
-  "rgb(54, 90, 231)", // tech
-  "rgb(52, 58, 234)", //marketing
-  "rgb(75, 50, 236)", //art
+  "rgb(54, 90, 231)", //Operations
+  "rgb(76, 48, 218)", // sport
+  "rgb(61, 176, 225)", //Charity
+  "rgb(24, 30, 192)", //content
   "rgb(105, 47, 238)", //physical
-  "rgb(136, 45, 240)", // other
-  "rgb(169, 43, 243)", //stak
-  "rgb(204, 41, 245)", // drop
-  "rgb(240, 38, 247)", // invest
+  "rgb(75,50,236)", // art
+  "rgb(208, 74, 246)", //events
+  "rgb(105, 47, 238)", // goods
+  "rgb(162, 28, 137)", // gaming
+  "rgb(136, 45, 240)", //other
+  "rgb(169, 43, 243)", //staking
+  "rgb(52, 58, 234)", //Marketing
+  "rgb(204, 41, 245)", //droposal
+  "rgb(240, 38, 247)", //invest
 ];

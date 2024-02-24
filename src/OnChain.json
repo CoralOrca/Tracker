@@ -4315,7 +4315,7 @@
     "Nouns ID": "",
     "Has extra funds": "No",
     "Category": [
-      "Community"
+      "Content"
     ],
     "Nouns vote": "",
     "Nouns Voting": 149,
@@ -6695,7 +6695,6 @@
     "Nouns ID": "",
     "Has extra funds": "No",
     "Category": [
-      "Charity",
       "Tech"
     ],
     "Nouns vote": "",
@@ -6743,7 +6742,7 @@
     "Prop Submission Date": "",
     "Inflow Gen": "",
     "Nb Nouns at Block": "",
-    "TLDR": "AI summary coming up"
+    "TLDR": "Aburra (formerly Alphacaster) requests 24 ETH for a 3-month period to further develop its web3 social application, leveraging the Farcaster protocol to enhance Nouns DAO communication and engagement. Having progressed from an MVP to a comprehensive platform that supports Farcaster spaces with native DAO integrations for proposals and voting, Aburra aims to integrate fully with Farcaster channels, improve user experience by transitioning from WebView to native app functionalities, and expand its reach to more DAOs. With a team of two experienced developers, Aburra has previously received 12.9 ETH in grants and now seeks funding to continue its mission to enrich DAO interactions and governance through innovative web3 solutions."
   },
   {
     "#": 394,
@@ -6937,7 +6936,6 @@
     "Nouns ID": "",
     "Has extra funds": "No",
     "Category": [
-      "Community",
       "Tech"
     ],
     "Nouns vote": "",
@@ -8602,8 +8600,7 @@
     "Nouns ID": "",
     "Has extra funds": "No",
     "Category": [
-      "Charity",
-      "Community"
+      "Content"
     ],
     "Nouns vote": "",
     "Nouns Voting": 121,
@@ -18491,7 +18488,7 @@
     "Nouns ID": "",
     "Has extra funds": "No",
     "Category": [
-      "Event"
+      "Events"
     ],
     "Nouns vote": "",
     "Nouns Voting": 199,
@@ -22563,7 +22560,7 @@
     "Nouns ID": "",
     "Has extra funds": "No",
     "Category": [
-      "Event"
+      "Events"
     ],
     "Nouns vote": "",
     "Nouns Voting": 60,
@@ -22688,7 +22685,9 @@
     "Includes Nouns": "No",
     "Nouns ID": "",
     "Has extra funds": "No",
-    "Category": "[\"Consumer Goods]",
+    "Category": [
+      "Goods"
+    ],
     "Nouns vote": "",
     "Nouns Voting": 82,
     "Nouns For": 51,

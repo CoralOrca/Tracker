@@ -228,21 +228,17 @@ tr:nth-child(even) {
 .category-sport{
   background-color: rgba(76, 48, 218, 0.71);
 }
-.category-food{
-  background-color: rgba(164, 48, 218, 0.71);
-}
 
 .category-building{
   background-color: rgba(17, 0, 170, 0.71);
 }
-
 .category-events{
   background-color: rgba(208, 74, 246, 0.71);
 }
-
 .category-gaming{
-  background-color: rgba(208, 74, 246, 0.71);
+  background-color: rgba(162, 28, 137, 0.71);
 }
+
 /*----------------------------------------------------------------------*/
 
 .code-style{
