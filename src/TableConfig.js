@@ -143,8 +143,8 @@ export const costsColumns = [
 
 export const colorsForFirstChart = [
   "rgb(0,0,0)", //ongoing
-  "rgb(241,46,92)", //defeated
-  "rgb(7, 186, 116)", //succeeded
+  "rgb(7, 186, 116)", //defeated
+  "rgb(241,46,92)", //succeeded
   "rgb(130, 137, 134)", //canceled
   "rgb(53, 54, 53)", //vetoed
   "rgb(130, 137, 134)", //expired
@@ -160,20 +160,20 @@ export const colorsForSecondChart = [
 ];
 
 export const colorsForThirdChart = [
-  "rgb(56, 120, 229)", //operations
-  "rgb(59, 148, 227)", //commu
-  "rgb(54, 90, 231)", //Operations
-  "rgb(76, 48, 218)", // sport
-  "rgb(61, 176, 225)", //Charity
+  "rgb(17, 0, 170)", //Building
   "rgb(24, 30, 192)", //content
+  "rgb(204, 41, 245", //Droposals
+  "rgb(76, 48, 218)", // sport
+  "rgb(59, 148, 227", //Community
+  "rgb(56, 120, 229", //Operations
   "rgb(105, 47, 238)", //physical
-  "rgb(75,50,236)", // art
-  "rgb(208, 74, 246)", //events
-  "rgb(105, 47, 238)", // goods
-  "rgb(162, 28, 137)", // gaming
-  "rgb(136, 45, 240)", //other
-  "rgb(169, 43, 243)", //staking
-  "rgb(52, 58, 234)", //Marketing
+  "rgb(61, 176, 225)", // charity
+  "rgb(075, 50, 236)", //Art
+  "rgb(208, 74, 246)", // Events
+  "rgb(105, 47, 238)", //Goods
+  "rgb(162, 28, 137)", //Gaming
+  "rgb(136, 45, 240)", //Other
+  "rgb(169, 43, 243)", //Staking
   "rgb(204, 41, 245)", //droposal
   "rgb(240, 38, 247)", //invest
 ];
