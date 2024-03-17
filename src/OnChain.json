@@ -1241,8 +1241,8 @@
     "Team": [
       "Wylin"
     ],
-    "Twitter links": ["https://twitter.com/ihwylie"
-     
+    "Twitter links": [
+      "https://twitter.com/ihwylie"
     ],
     "Voting end": "",
     "Price of ETH": "",
@@ -1366,8 +1366,14 @@
     "Sponsor": "",
     "Sponsor Link": "https://etherscan.io/address/0x8d2b28265bee1c926433a25d951adb03de9ab275",
     "Former candidate": "No",
-    "Team": ["Monse Zavala Cahue", "Nouns Breakers"],
-    "Twitter links": ["https://twitter.com/monsecahue", "https://twitter.com/nounsbreakers"],
+    "Team": [
+      "Monse Zavala Cahue",
+      "Nouns Breakers"
+    ],
+    "Twitter links": [
+      "https://twitter.com/monsecahue",
+      "https://twitter.com/nounsbreakers"
+    ],
     "Voting end": "",
     "Price of ETH": "",
     "Notes": "",
@@ -1666,8 +1672,14 @@
     "Sponsor": "",
     "Sponsor Link": "",
     "Former candidate": "No",
-    "Team": "",
-    "Twitter links": "",
+    "Team": [
+      "WideEyeKarl",
+      "HashConfucius"
+    ],
+    "Twitter links": [
+      "https://twitter.com/0xwideeye",
+      "https://twitter.com/noun_74"
+    ],
     "Voting end": "",
     "Price of ETH": "",
     "Notes": "",
@@ -1720,8 +1732,16 @@
     "Sponsor": "0xsvg.eth",
     "Sponsor Link": "https://etherscan.io/address/0x66cd193d0c0fb3b9b44dd371107617a7e9f38184",
     "Former candidate": "No",
-    "Team": "",
-    "Twitter links": "",
+    "Team": [
+      "MikeGood",
+      "Cardno",
+      "Index"
+    ],
+    "Twitter links": [
+      "https://twitter.com/goodbeats",
+      "https://twitter.com/cardnonft",
+      "https://twitter.com/modrovsky"
+    ],
     "Voting end": "",
     "Price of ETH": "",
     "Notes": "",
@@ -1776,8 +1796,12 @@
     "Sponsor": "ccarella.eth",
     "Sponsor Link": "https://etherscan.io/address/0x3b60e31cfc48a9074cd5bebb26c9eaa77650a43f",
     "Former candidate": "No",
-    "Team": "",
-    "Twitter links": "",
+    "Team": [
+      "Nick Dodson"
+    ],
+    "Twitter links": [
+      "https://twitter.com/nickddsn"
+    ],
     "Voting end": "",
     "Price of ETH": "",
     "Notes": "",
@@ -1835,8 +1859,8 @@
     "Sponsor": "",
     "Sponsor Link": "",
     "Former candidate": "No",
-    "Team": "",
-    "Twitter links": "",
+    "Team": ["Supriyo"],
+    "Twitter links": ["https://twitter.com/next_roy"],
     "Voting end": "",
     "Price of ETH": "",
     "Notes": "",
@@ -2310,7 +2334,7 @@
     "Sponsor Link": "",
     "Former candidate": "No",
     "Team": [
-      ""
+      "valgtaylor"
     ],
     "Twitter links": [
       "https://twitter.com/valgtaylor"
